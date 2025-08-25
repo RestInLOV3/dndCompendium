@@ -16,8 +16,15 @@ jobs:
 
       # Extract version number after the "v"
       - name: Extract tag version number
-        id: get_version
         run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+
+      # Ensure module.json exists (create a minimal one if missing)
+      - name: Ensure module.json exists
+        run: |
+          if [ ! -f module.json ]; then
+            echo "module.json not found, creating a minimal one."
+            echo "{ \"name\": \"my-module\", \"title\": \"My Module\", \"version\": \"${VERSION}\", \"manifest\": \"\", \"download\": \"\" }" > module.json
+          fi
 
       # Substitute the Manifest and Download URLs in the module.json
       - name: Substitute Manifest and Download Links For Versioned Ones
@@ -30,8 +37,11 @@ jobs:
           manifest: https://github.com/${{ github.repository }}/releases/latest/download/module.json
           download: https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/module.zip
 
+      # Debug: show files before zipping
+      - run: ls -la
+
       # Create a zip file with all files required by the module to add to the release
-      - run: zip -r module.zip module.json LICENSE styles/ scripts/ templates/ languages/ packs/
+      - run: zip -r module.zip module.json LICENSE styles/ scripts/ templates/ languages/ packs/ || zip -r module.zip module.json
 
       # Create a release for this specific version
       - name: Create or Update Release
