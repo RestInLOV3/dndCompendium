@@ -3,7 +3,7 @@
   "id": "dnd-compendium",
   "title": "dndCompendium",
   "description": "커스텀 추가 콘텐츠",
-  "version": "This is auto replaced",
+  "version": "#{VERSION}#",
   "library": "false",
   "manifestPlusVersion": "1.0.0",
   "minimumCoreVersion": "13",
@@ -43,7 +43,7 @@
             "system": "dnd5e"
         }
     ],
-  "url": "This is auto replaced",
-  "manifest": "This is auto replaced",
-  "download": "This is auto replaced"
+  "url": "#{URL}#",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#"
 }
