@@ -1,5 +1,6 @@
 {
   "name": "dndCompendium",
+  "id": "dnd-compendium",
   "title": "dndCompendium",
   "description": "커스텀 추가 콘텐츠",
   "version": "This is auto replaced",
@@ -17,25 +18,29 @@
             "name": "effect",
             "label": "효과",
             "path": "packs/effect",
-            "type": "Item"
+            "type": "Item",
+            "system": "dnd5e"
         },
         {
             "name": "macro",
             "label": "매크로",
             "path": "packs/macro",
-            "type": "Macro"
+            "type": "Macro",
+            "system": "dnd5e"
         },
         {
             "name": "spell",
             "label": "추가 주문",
             "path": "packs/spell",
-            "type": "Item"
+            "type": "Item",
+            "system": "dnd5e"
         },
         {
             "name": "spellclass",
             "label": "클래스별 주문",
             "path": "packs/spellclass",
-            "type": "RollTable"
+            "type": "RollTable",
+            "system": "dnd5e"
         }
     ],
   "url": "This is auto replaced",
