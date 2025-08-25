@@ -1,66 +1,41 @@
 {
-  "name": "pack-mod",
-  "title": "모듈 이름",
-  "description": "모듈 설명",
+  "name": "dndCompendium",
+  "title": "dndCompendium",
+  "description": "커스텀 추가 콘텐츠",
   "version": "This is auto replaced",
   "library": "false",
   "manifestPlusVersion": "1.0.0",
-  "minimumCoreVersion": "9",
-  "compatibleCoreVersion": "9",
+  "minimumCoreVersion": "13",
+  "compatibleCoreVersion": "13",
   "authors": [
     {
-      "name": "만든이 이름"
+      "name": "RestInLOV3"
     }
   ],
    "packs": [
         {
-            "name": "module-creatures",
-            "label": "Module Creatures",
-            "path": "./packs/creatures.db",
-            "entity": "Actor",
-            "type": "Actor"
-        },
-        {
-            "name": "module-items",
-            "label": "Module Items",
-            "path": "./packs/items.db",
-            "entity": "Item",
+            "name": "effect",
+            "label": "효과",
+            "path": "packs/effect",
             "type": "Item"
         },
         {
-            "name": "module-scenes",
-            "label": "Module Scenes",
-            "path": "./packs/scenes.db",
-            "entity": "Scene",
-            "type": "Scene"
-        },
-        {
-            "name": "module-journal-entries",
-            "label": "Module Journal Entries",
-            "path": "./packs/journal-entries.db",
-            "entity": "JournalEntry",
-            "type": "JournalEntry"
-        },
-        {
-            "name": "module-macros",
-            "label": "Module Macros",
-            "path": "./packs/macros.db",
-            "entity": "Macro",
+            "name": "macro",
+            "label": "매크로",
+            "path": "packs/macro",
             "type": "Macro"
         },
         {
-            "name": "module-roll-tables",
-            "label": "Module Roll Tables",
-            "path": "./packs/roll-tables.db",
-            "entity": "RollTable",
-            "type": "RollTable"
+            "name": "spell",
+            "label": "추가 주문",
+            "path": "packs/spell",
+            "type": "Item"
         },
         {
-            "name": "module-playlists",
-            "label": "Module Playlists",
-            "path": "./packs/playlists.db",
-            "entity": "Playlist",
-            "type": "Playlist"
+            "name": "spellclass",
+            "label": "클래스별 주문",
+            "path": "packs/spellclass",
+            "type": "RollTable"
         }
     ],
   "url": "This is auto replaced",
